@@ -13,7 +13,7 @@ class Game:
             print(self.player, "plays")
             row = int(input("Row: "))
             col = int(input("Col: "))
-            if self.board.play(row, col, self.player):
+            if self.board.play(row-1, col-1, self.player):
                 self.winner = self.board.get_winner()
                 if self.winner != None:
                     self.board.display()
